@@ -67,6 +67,8 @@
         @"Concentrate and ask again",
         @"Unable to answer now", nil];
     
+    self.predictionLabel.alpha = 0.0;
+    
 }
 
 -(void)makePrediction {
@@ -74,7 +76,7 @@
     self.predictionLabel.text = [self.predictionArray objectAtIndex:index];
     [self.backgroundImageView startAnimating];
     [UIView animateWithDuration:2.0 animations:^{
-        self.predictionLabel.alpha = 1.0;
+        self.predictionLabel.alpha = 0.7;
     }];
 }
 
