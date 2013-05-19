@@ -25,7 +25,10 @@
 {
     [super viewDidLoad];
     UIImage *backgroundImage = [UIImage imageNamed:@"background.png"];
-    self.backgroundImageView = [[UIImageView alloc] initWithImage:backgroundImage];
+    self.backgroundImageView = [[UIImageView alloc] initWithFrame:self.view.bounds];
+    self.backgroundImageView.image = backgroundImage;
+    self.backgroundImageView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+    self.backgroundImageView.contentMode = UIViewContentModeScaleAspectFill;
     [self.view insertSubview:self.backgroundImageView atIndex:0];
     
     self.backgroundImageView.animationImages = [[NSArray alloc] initWithObjects:

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation AppDelegate
 
@@ -18,6 +19,8 @@
         [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     #endif
     [TestFlight takeOff:@"b39e652f-e596-4380-aa32-58cbf5551095"];
+    //Crashltyics
+    [Crashlytics startWithAPIKey:@"4c4cde7e757c54b57dc191b5c5c0e941a74411fd"];
     return YES;
 }
 							
